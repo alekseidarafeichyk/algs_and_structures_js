@@ -23,6 +23,8 @@ function binarySearch(arr, item) {
             start = middle + 1;
         }
     }
+
+    return position;
 }
 
-console.log(binarySearch(arr, 7));
+console.log(binarySearch(arr, 1));
