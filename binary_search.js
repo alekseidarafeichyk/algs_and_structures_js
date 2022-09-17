@@ -27,4 +27,20 @@ function binarySearch(arr, item) {
     return position;
 }
 
+
+function recursiveBinarySearch(arr, item, start, end) {
+   const middle = Math.floor((start + end) / 2);
+
+    if (item === arr[middle]) {
+        return middle;
+    }
+
+    if (item < arr[middle]) {
+        return recursiveBinarySearch(arr,item, start, middle - 1);
+    } else {
+        return recursiveBinarySearch(arr,item,middle + 1, end);
+    }
+}
+
 console.log(binarySearch(arr, 1));
+console.log(recursiveBinarySearch(arr, 13, 0 , arr.length));
